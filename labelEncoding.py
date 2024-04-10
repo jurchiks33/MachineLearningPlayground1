@@ -14,3 +14,9 @@ labels = ['toyota', 'ford', 'audi']
 encoded_labels = label_encoder.transform(labels)
 print("\nLabels =", labels)
 print("Encoded labels =", list(encoded_labels))
+
+#Transforming back
+encoded_labels = [2, 1, 0, 3, 1]
+decoded_labels = label_encoder.inverse_transform(encoded_labels)
+print("\nEncoded labels =", encoded_labels)
+print("Decoded labels =", list(decoded_labels))
