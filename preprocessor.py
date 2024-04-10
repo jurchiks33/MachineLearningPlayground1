@@ -20,3 +20,9 @@ print("\nL1 normalized data =", data_normalized)
 #Binarization
 data_binarized = preprocessing.Binarizer(threshold=1.4).transform(data)
 print("\nBinarized data =", data_binarized)
+
+#Encoding
+encoder = preprocessing.OneHotEncoder()
+encoder.fit([[0, 2, 1, 12], [1, 3, 5, 3], [2, 3, 2, 12], [1, 2, 4, 3]])
+encoded_vector = encoder.transform([[2, 3, 5, 3]]).toarray()
+print("\nEncoded vector =", encoded_vector)
