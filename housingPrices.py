@@ -38,3 +38,10 @@ evs = explained_variance_score(y_test, y_pred_ab)
 print("\n### AdaBoost Performance ####")
 print("Mean squared error =", round(mse, 2))
 print("Explained variance score =", round(evs, 2))
+
+#Plotting
+plot_feature_importances(dt_regressor.feature_importances_, 'Decision Tree regressor', 
+                         housing_data.feature_names)
+plot_feature_importances(ab_regressor.feature_importances_, 'AdaBoost regressor', 
+                         housing_data.feature_names)
+
