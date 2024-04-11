@@ -39,6 +39,11 @@ print("\n### AdaBoost Performance ####")
 print("Mean squared error =", round(mse, 2))
 print("Explained variance score =", round(evs, 2))
 
+#defining feature_importances
+def plot_feature_importances(feature_importances, title, feature_names):
+    #Normalization of the values
+    feature_importances = 100.0 * (feature_importances / max(feature_importances))
+    
 #Plotting
 plot_feature_importances(dt_regressor.feature_importances_, 'Decision Tree regressor', 
                          housing_data.feature_names)
