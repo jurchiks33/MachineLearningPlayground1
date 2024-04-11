@@ -48,3 +48,4 @@ plt.show()
 #Run data with 'python regressor.py data/data_singlevar.txt'
 #First will apear train_pred and after test_pred.
 ###########################################
+
