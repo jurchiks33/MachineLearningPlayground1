@@ -6,7 +6,7 @@ from sklearn.metrics import mean_squared_error, explained_variance_score
 from sklearn.utils import shuffle
 import matplotlib.pyplot as plt
 
-housing_data = datasets.load_boston()
+housing_data = datasets.fetch_california_housing()
 
 X, y = shuffle(housing_data.data, housing_data.target, random_state=7)
 
@@ -24,3 +24,9 @@ ab_regressor = AdaBoostRegressor(DecisionTreeRegressor(max_depth=4),
 ab_regressor.fit(X_train, y_train)
 
 #Performance evaluation
+y_pred_dt = dt_regressor.predict(X_test)
+mse = mean_squared_error(y_test, y_pred_dt)
+evs = explained_variance_score(y_test, y_pred_dt)
+print("\n### Decision Tree Performance ####")
+print("Mean squared error =", round(mse, 2))
+print("Explained variance score =", round(evs, 2))
