@@ -37,6 +37,14 @@ plt.plot(x_train, y_train_pred, color='black', linewidth=4)
 plt.title('Training data')
 plt.show()
 
+y_test_pred = linear_regressor.predict(x_test)
+
+plt.scatter(x_test, y_test, color='green')
+plt.plot(x_test, y_test_pred, color='black', linewidth=4)
+plt.title('Test data')
+plt.show()
+
 ###########################################
 #Run data with 'python regressor.py data/data_singlevar.txt'
+#First will apear train_pred and after test_pred.
 ###########################################
