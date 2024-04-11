@@ -30,3 +30,11 @@ evs = explained_variance_score(y_test, y_pred_dt)
 print("\n### Decision Tree Performance ####")
 print("Mean squared error =", round(mse, 2))
 print("Explained variance score =", round(evs, 2))
+
+#Performanc eevaluation with AdaBoost
+y_pred_ab = ab_regressor.predict(X_test)
+mse = mean_squared_error(y_test, y_pred_ab)
+evs = explained_variance_score(y_test, y_pred_ab)
+print("\n### AdaBoost Performance ####")
+print("Mean squared error =", round(mse, 2))
+print("Explained variance score =", round(evs, 2))
